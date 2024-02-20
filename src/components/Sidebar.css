@@ -1,0 +1,25 @@
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    flex: .22;
+    max-width: 300px;
+    margin-right: 10px;
+}
+.compose-btn{
+    width: 120px;
+    margin: 5px 20px 15px !important;
+    background: #C2E7FF !important;
+    padding: 10px 15px !important;
+    border-radius: 30px !important;
+    color: rgb(75, 74, 74) !important;
+    text-transform: capitalize !important;
+    font-weight: 600 !important;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif !important;
+    font-size: 14px !important;
+}
+
+.sidebar-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

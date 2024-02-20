@@ -1,0 +1,39 @@
+.custom-icon2{
+    font-size: 17px;
+    color: rgb(37, 37, 37);
+}
+.mail-body{
+    padding: 10px 15px;
+}
+.mailbody-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.mailheader-left{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+.mailheader-right{
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+}
+.mailheader-right p{
+    font-size: 15px;
+    font-weight: 700;
+    padding-right: 10px;
+}
+.mailheader-left p{
+    color: #0C56CC;
+    font-weight: 700;
+}
+.mail-message{
+    padding: 20px;
+    border-radius: 10px;
+}
+.mail-message > p{
+    overflow-wrap: break-word;
+}

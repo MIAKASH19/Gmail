@@ -1,0 +1,10 @@
+.app{
+    background: #F6F8FC;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    height: 100vh;
+    position: relative;
+}
+.app-body{
+    display: flex;
+    height: 88vh;
+}

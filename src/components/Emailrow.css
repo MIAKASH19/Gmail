@@ -1,0 +1,66 @@
+.emailrow{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+    cursor: pointer;
+    border-radius: 8px;
+    padding-right: 20px;
+}
+.emailrow .MuiSvgIcon-root{
+    font-size: 18px;
+}
+.emailrow-options{
+    display: flex;
+    align-items: center;
+    color: rgb(104, 104, 104);
+    gap: -14px;
+}
+.emailrow:hover{
+    box-shadow: 0px 4px 4px -2px rgba(0,0,0,0.2);
+    border-top: 1px solid rgb(233, 232, 232);
+    /* background-color: #f4f4f4; */
+}
+.emailrow:hover .moreicon{
+    opacity: 1!important;
+}
+.moreicon{
+    opacity: 0!important;
+    margin-left: 10px;
+    margin-right: -10px;
+}
+.emailrow-message{
+    display: flex;
+    flex: 0.8;
+    align-items: center;
+    font-size: 17px;
+    margin-right: 50px;
+}
+.emailrow-message > h5{
+    width: 700px;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #000000;
+    /* background: yellow; */
+    text-overflow: ellipsis;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.emailrow-message > h5 span{
+    font-weight: 100;
+}
+
+.emailrow-title{
+    text-overflow: ellipsis;
+    text-transform: capitalize;
+    font-size: 14px;
+    flex: .18;
+    /* background: red; */
+    margin-right: 20px;
+}
+.emailrow-time{
+    font-size: 12px;
+    font-weight: bolder;
+    color: #555555;
+}

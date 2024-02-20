@@ -1,0 +1,17 @@
+.mail-heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+.mail-heading h1{
+    font-size: 25px;
+    text-transform: capitalize;
+    font-weight: 100;
+    margin-left: 30px;
+    letter-spacing: -1px;
+}
+.custom-icon2{
+    font-size: 17px;
+    color: rgb(37, 37, 37);
+}

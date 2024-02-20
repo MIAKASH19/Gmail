@@ -1,0 +1,24 @@
+.mail-tools{
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(240, 237, 237);
+}
+.mailtools-left{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+.custom-icon{
+    font-size: 20px;
+    color: rgb(37, 37, 37);
+}
+.custom-icon2{
+    font-size: 17px;
+    color: rgb(37, 37, 37);
+}

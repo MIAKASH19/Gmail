@@ -1,0 +1,10 @@
+.mail{
+    position: relative;
+    flex: 1;
+    overflow: hidden;
+    padding: 0px;
+    background: white;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+}
