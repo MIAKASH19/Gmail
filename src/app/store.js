@@ -1,8 +1,8 @@
-import { configureStore } from '@redux/toolkit'
+import { configureStore } from '@reduxjs/toolkit'
 import mailReducer from '../features/mailSlice'
 
-export default configureStore({
-    reducer: (
+export const store = configureStore({
+    reducer: {
         mail: mailReducer,
-    )
+    }
 })

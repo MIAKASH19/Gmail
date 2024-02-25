@@ -18,12 +18,6 @@ export const mailSlice = createSlice({
 export const { OpenSendMessage, closeSendMessage } = 
 mailSlice.actions
 
-export const incrementAsync = amount => dispatch => {
-    setTimeout(()=>{
-        dispatch(incrementByAmount(amount));
-    },1000)
-}
-
-export const selecsendMessageIsOpen = state => state.mail.sendMessageIsOpen;
+export const selectsendMessageIsOpen = state => state.mail.sendMessageIsOpen;
 
 export default mailSlice.reducer;

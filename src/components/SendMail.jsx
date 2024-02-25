@@ -11,20 +11,26 @@ const validationSchema = yup.object().shape({
 
   subject: yup.string().required("Subject is required"),
 
-  message: yup.string().required("Write Message first"),
+  message: yup.string().required("Message is required field"),
 
   to: yup.string().email("email is invalid").required("Email is required"),
+
 });
 
 const SendMail = () => {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm({
     resolver: yupResolver(validationSchema),
+    defaulValues: {
+      to: "",
+      subject: "",
+      message: "",
+    }
   });
+
 
   const onSubmit = (data) => {
     alert(JSON.stringify(data, null, 2));
