@@ -20,6 +20,7 @@ const validationSchema = yup.object().shape({
 const SendMail = () => {
   const {
     register,
+    reset,
     handleSubmit,
     formState: { errors },
   } = useForm({
@@ -34,6 +35,7 @@ const SendMail = () => {
 
   const onSubmit = (data) => {
     alert(JSON.stringify(data, null, 2));
+    reset();
   };
 
   return (
