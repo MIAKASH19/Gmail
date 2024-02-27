@@ -30,10 +30,17 @@
     color: #0C56CC;
     font-weight: 700;
 }
-.mail-message{
+.mail-subject{
     padding: 20px;
     border-radius: 10px;
 }
-.mail-message > p{
+.mail-subject > p{
     overflow-wrap: break-word;
+}
+.mail-description{
+    border-radius: 20px;
+    padding: 20px 10px;
+    margin: 0 10px;
+    font-size: 16px;
+    font-weight: bold;
 }

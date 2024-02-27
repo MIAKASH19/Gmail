@@ -5,7 +5,7 @@ import StarBorderOutlinedIcon from "@mui/icons-material/StarBorderOutlined";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { selectOpenMail } from "../features/mailSlice";
+import { selectMail } from "../features/mailSlice";
 
 const Emailrow = ({ id, title, subject, description, time }) => {
   const navigate = useNavigate();
@@ -13,7 +13,7 @@ const Emailrow = ({ id, title, subject, description, time }) => {
 
   const OpenMail = () => {
     dispatch(
-      selectOpenMail({
+      selectMail({
         id,
         title,
         subject,

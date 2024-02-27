@@ -18,8 +18,8 @@ const MailBody = () => {
           <IconButton>
             <AccountCircleIcon />
           </IconButton>
-          <p>hkhkjhkj{selectedMail?.subject}jhkjhkkj</p>
-          <p>hkhkjhkj{selectedMail?.subject}jhkjhkkj</p>
+          <h4>{selectedMail?.title}</h4>
+          
         </div>
         <div className="mailheader-right">
           <p className="mail-time">{selectedMail?.time}</p>
@@ -39,10 +39,12 @@ const MailBody = () => {
           </IconButton>
         </div>
       </div>
-      <div className="mail-message">
-        <p>This is a text messge</p>
+      <div className="mail-subject">
+        <p>Subject - {selectedMail?.subject}</p>
       </div>
-      <h1>mail</h1>
+        <div className = "mail-description">
+          <p>{selectedMail?.description}</p>
+        </div>
     </div>
   );
 };
