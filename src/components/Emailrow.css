@@ -34,10 +34,10 @@
     flex: 0.8;
     align-items: center;
     font-size: 17px;
-    margin-right: 50px;
+    margin-right: 30px;
 }
 .emailrow-message > h5{
-    width: 700px;
+    width: 550px;
     font-weight: 600;
     white-space: nowrap;
     overflow: hidden;
@@ -53,7 +53,7 @@
 
 .emailrow-title{
     text-overflow: ellipsis;
-    text-transform: capitalize;
+    text-transform: lowercase;
     font-size: 14px;
     flex: .18;
     /* background: red; */
@@ -62,5 +62,5 @@
 .emailrow-time{
     font-size: 12px;
     font-weight: bolder;
-    color: #555555;
+    color: #000000;
 }

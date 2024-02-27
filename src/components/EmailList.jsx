@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Checkbox, IconButton } from "@mui/material";
 import ArrowDropDown from "@mui/icons-material/ArrowDropDown";
 import MoreVertOutlinedIcon from "@mui/icons-material/MoreVertOutlined";
@@ -13,8 +13,23 @@ import { FaRedo } from "react-icons/fa";
 import "./EmailList.css";
 import Section from "./Section";
 import Emailrow from "./Emailrow";
+import { db } from "./firebase";
 
 const EmailList = () => {
+  const [emails, setEmails] = useState([]);
+
+  useEffect(() => {
+    db.collection("emails")
+      .orderBy("timestamp", "desc")
+      .onSnapshot((snapshot) =>
+        setEmails(
+          snapshot.docs.map((doc) => ({
+            id: doc.id,
+            data: doc.data(),
+          }))
+        )
+      );
+  }, []);
   return (
     <div className="emaillist">
       <div className="emaillist-settings">
@@ -53,38 +68,16 @@ const EmailList = () => {
         <Section Icon={GoPeople} title="Social" color="green" />
       </div>
       <div className="emaillist-list">
-        <Emailrow
-          title="LinkedIn job offer"
-          subject="Hey I'm akash"
-          description="jsafdkhfkjashdfkjahfkjadhfkjashdfkjahsdfjkhfkjshfkjshdkjhfklasjdhfkjsahdfkljsahdkljhfkljashdkfjhskjdfhksjdhkfjhdsklfhsdj"
-          time="10pm"
-        />
-      </div>
-      <div className="emaillist-list">
-        <Emailrow
-          title="LinkedIn job offer"
-          subject="Hey I'm akash"
-          description="jsafdkhfkjashdfkjahfkjadhfkjashdfkjahsdfjkhfkjshfkjshdkjhfklasjdhfkjsahdfkljsahdkljhfkljashdkfjhskjdfhksjdhkfjhdsklfhsdj"
-          time="10pm"
-        />
-      </div>
-      <div className="emaillist-list">
-        <Emailrow
-          title="LinkedIn job offer"
-          subject="Hey I'm akash"
-          description="jsafdkhfkjashdfkjahfkjadhfkjashdfkjahsdfjkhfkjshfkjshdkjhfklasjdhfkjsahdfkljsahdkljhfkljashdkfjhskjdfhksjdhkfjhdsklfhsdj"
-          time="10pm"
-        />
-      </div>
-      <div className="emaillist-list">
-        <Emailrow
-          title="LinkedIn job offer"
-          subject="Hey I'm akash"
-          description="jsafdkhfkjashdfkjahfkjadhfkjashdfkjahsdfjkhfkjshfkjshdkjhfklasjdhfkjsahdfkljsahdkljhfkljashdkfjhskjdfhksjdhkfjhdsklfhsdj"
-          time="10pm"
-        />
-      </div>
-      <div className="emaillist-list">
+        {emails.map(({ id, data: { to, subject, message, timestamp } }) => (
+          <Emailrow
+            id={id}
+            key={id}
+            title={to}
+            subject={subject}
+            description={message}
+            time={new Date(timestamp?.seconds * 1000).toUTCString()}
+          />
+        ))}
         <Emailrow
           title="LinkedIn job offer"
           subject="Hey I'm akash"
