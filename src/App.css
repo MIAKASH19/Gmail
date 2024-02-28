@@ -3,6 +3,7 @@
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     height: 100vh;
     position: relative;
+    overflow: hidden;
 }
 .app-body{
     display: flex;

@@ -78,12 +78,6 @@ const EmailList = () => {
             time={new Date(timestamp?.seconds * 1000).toUTCString()}
           />
         ))}
-        <Emailrow
-          title="LinkedIn job offer"
-          subject="Hey I'm akash"
-          description="jsafdkhfkjashdfkjahfkjadhfkjashdfkjahsdfjkhfkjshfkjshdkjhfklasjdhfkjsahdfkljsahdkljhfkljashdkfjhskjdfhksjdhkfjhdsklfhsdj"
-          time="10pm"
-        />
       </div>
     </div>
   );

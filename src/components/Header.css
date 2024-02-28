@@ -3,6 +3,7 @@
     align-items: center;
     justify-content: space-between;
     padding: .8vw;
+    padding-right: 10px;
 }
 /* search = #EAF1FB
 hover = #D3E3FD
@@ -51,4 +52,7 @@ input::placeholder{
 .header-middle svg,
 .header-right svg{
     fill: rgb(102, 102, 102);
+}
+.avater{
+    cursor: pointer;
 }

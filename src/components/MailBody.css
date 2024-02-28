@@ -4,6 +4,10 @@
 }
 .mail-body{
     padding: 10px 15px;
+    overflow-y: scroll;
+}
+.mailbody::-webkit-scrollbar{
+    display: none;
 }
 .mailbody-header{
     display: flex;
